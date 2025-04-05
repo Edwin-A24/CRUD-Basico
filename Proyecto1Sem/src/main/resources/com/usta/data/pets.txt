@@ -1,0 +1,1 @@
+Dog|French Poodle|Adult|Copito|2019-01-12|Male|White|Curly

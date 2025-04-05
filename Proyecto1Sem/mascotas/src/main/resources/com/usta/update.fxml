@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="513.0" prefWidth="842.0" spacing="25.0" style="-fx-background-color: #bcc3a7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usta.updateController">
+    <children>
+      <AnchorPane prefHeight="503.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="552.0" fitWidth="794.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/fondo3.jpg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="107.0" layoutY="50.0" prefHeight="126.0" prefWidth="114.0">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logo12.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="530.0" prefWidth="802.0">
+               <children>
+                  <ImageView fitHeight="368.0" fitWidth="365.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logo11.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <TableView fx:id="petsTable" layoutX="99.0" layoutY="265.0" onMouseClicked="#setPetsToEdit" prefHeight="193.0" prefWidth="603.0" style="-fx-background-color: #CAC5C0;">
+               <columns>
+                  <TableColumn fx:id="animalCol" prefWidth="75.0" text="Animal" />
+                  <TableColumn fx:id="otherCol" prefWidth="75.0" text="Race" />
+                  <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+                  <TableColumn fx:id="nameCol" prefWidth="76.0" text="Name" />
+                  <TableColumn fx:id="ageCol" prefWidth="74.39996337890625" text="Birthdate" />
+                  <TableColumn fx:id="sexCol" prefWidth="75.0" text="Sex" />
+                  <TableColumn fx:id="colorCol" prefWidth="75.0" text="Color" />
+                  <TableColumn fx:id="hairCol" prefWidth="75.0" text="Hair" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" layoutX="269.0" layoutY="84.0" prefHeight="72.0" prefWidth="434.0">
+               <children>
+                  <Label text="Animal" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="89.0" layoutY="226.0" prefHeight="26.0" prefWidth="624.0">
+               <children>
+                  <Label text="Type">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="typeCBX" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #CAC5C0;">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label prefHeight="20.0" prefWidth="40.0" text="Color">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="colorCBX" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #CAC5C0;">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="Hair">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="hairCBX" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #CAC5C0;" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="165.0" layoutY="107.0" prefHeight="26.0" prefWidth="546.0">
+               <children>
+                  <Label text="Sex">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="sexCBX" prefWidth="150.0" style="-fx-background-color: #CAC5C0;">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="Birthdate">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="ageDtP" prefHeight="26.0" prefWidth="167.0" style="-fx-background-color: #CAC5C0;">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="293.0" layoutY="141.0" prefHeight="26.0" prefWidth="250.0">
+               <children>
+                  <Label text="Animal">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="animalCBX" prefWidth="150.0" style="-fx-background-color: #CAC5C0;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="161.0" layoutY="170.0" prefHeight="54.0" prefWidth="519.0">
+               <children>
+                  <Label text="Race">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="otherTxt" promptText="Other Species" style="-fx-background-color: #CAC5C0;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="239.0" layoutY="56.0" prefHeight="42.0" prefWidth="318.0">
+               <children>
+                  <Label text="Name">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTxt" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #CAC5C0;" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" layoutX="570.0" layoutY="44.0" prefHeight="73.0" prefWidth="158.0">
+               <children>
+                  <Label prefHeight="72.0" prefWidth="157.0" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="247.0" layoutY="462.0" prefHeight="42.0" prefWidth="126.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#editPets" prefHeight="36.0" prefWidth="68.0" style="-fx-background-color: #000000;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="477.0" layoutY="462.0" prefHeight="35.0" prefWidth="144.0">
+               <children>
+                    <Button onAction="#switchTopreview" prefHeight="36.0" prefWidth="68.0" style="-fx-background-color: #384827;" text="Keep" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+    </padding>
+</VBox>
