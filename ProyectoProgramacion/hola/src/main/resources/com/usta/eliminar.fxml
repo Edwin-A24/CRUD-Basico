@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="586.0" prefWidth="789.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usta.EliminarController">
+    <children>
+      <AnchorPane prefHeight="546.0" prefWidth="955.0">
+         <children>
+            <ImageView fitHeight="560.0" fitWidth="757.0" layoutX="16.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/fondo2.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="326.0" layoutY="34.0" prefHeight="87.0" prefWidth="142.0" text="Eliminar" textFill="#af9d8c">
+               <font>
+                  <Font name="Elephant" size="30.0" />
+               </font>
+            </Label>
+            <TableView fx:id="hakunaTable" layoutX="105.0" layoutY="169.0" onMouseClicked="#ventanaEliminar" prefHeight="230.0" prefWidth="562.0" style="-fx-background-color: #B3A79A;">
+               <columns>
+                  <TableColumn fx:id="nombreCol" prefWidth="140.6" style="-fx-background-color: #FFFFFF;" text="Nombre" />
+                  <TableColumn fx:id="animalCol" prefWidth="140.6" style="-fx-background-color: #FFFFFF;" text="Animal" />
+                  <TableColumn fx:id="sexCol" prefWidth="140.6" style="-fx-background-color: #FFFFFF;" text="Sexo" />
+                  <TableColumn fx:id="nacimientoCol" prefWidth="140.6" style="-fx-background-color: #FFFFFF;" text="Nacimiento" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER" layoutX="33.0" layoutY="451.0" prefHeight="42.0" prefWidth="707.0">
+               <children>
+                  <Button fx:id="secondaryButton4" onAction="#switchToAgregar" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #af9d8c;" text="Agregar" textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="secondaryButton1" onAction="#switchToMirar" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #af9d8c;" text="Mirar" textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="secondaryButton2" onAction="#switchToEditar" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #af9d8c;" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="secondaryButton3" onAction="#switchToMenu" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #af9d8c;" text="Menú" textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
